@@ -100,17 +100,49 @@ body {
 #container_star {
     grid-area: star;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 55px 55px 55px;
+    align-content: start;
+    row-gap: 20px;
+    padding-top: 40px;
 }
 
 .stars_area {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    column-gap: 20px;
+    max-width: 420px;
+    width: 100%;
+    padding: 0px 30px;
+    border-radius: 10px;
+    background-color: var(--light-grayish-magenta);
+}
+
+.stars_area:nth-child(1) {
+    margin: 0;
+}
+
+.stars_area:nth-child(2) {
+    margin-left: 50px;
+}
+
+.stars_area:nth-child(3) {
+    margin-left: 100px;
+}
+
+.stars_area p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
 }
 
 .stars_list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 15px);
+    column-gap: 10px;
     list-style: none;
 }
+
 
 
 
