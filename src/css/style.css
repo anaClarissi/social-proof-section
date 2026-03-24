@@ -19,7 +19,7 @@
 body {
     min-height: 100vh;
     font-family: var(--font-primary), Arial, Helvetica, sans-serif;
-    font-size: 0.93rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -44,9 +44,9 @@ body {
     ;
     row-gap: 20px;
     column-gap: 100px;
-    max-width: 1440px;
+    max-width: 1320px;
     width: 100%;
-    max-height: 700px;
+    max-height: 750px;
     height: 100%;
     padding: 20px;
 }
@@ -150,4 +150,67 @@ body {
     grid-area: card;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+}
+
+.card {
+    display: grid;
+    grid-template-areas: 
+    "img name"
+    "img verified"
+    "comment comment"
+    ;
+    grid-template-columns: auto 1fr;
+    align-content: start;
+    row-gap: 10px;
+    column-gap: 10px;
+    color: var(--white);
+    padding: 30px;
+    max-width: 400px;
+    max-height: 250px;
+    border-radius: 10px;
+    background-color: var(--very-dark-magenta);
+}
+
+.card:nth-child(1) {
+    margin-top: 0;
+}
+
+.card:nth-child(2) {
+    margin-top: 20px;
+}
+
+.card:nth-child(3) {
+    margin-top: 40px;
+}
+
+.card_img {
+    grid-area: img;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.name {
+    grid-area: name;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.verified {
+    grid-area: verified;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--soft-pink);
+}
+
+.name, .verified {
+    margin: 0 0 0 10px;
+    line-height: 1.2;
+}
+
+.comment {
+    grid-area: comment;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-top: 20px;
 }
